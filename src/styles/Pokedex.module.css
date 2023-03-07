@@ -1,0 +1,91 @@
+.pokedex {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4rem;
+}
+
+.pokedex h1 {
+  font-size: 4rem;
+}
+
+.pokedexContainer {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 24rem));
+  gap: 2rem;
+}
+
+.pokedexCard {
+  width: 100%;
+  height: fit-content;
+  background-color: rgba(236, 236, 236, 0.704);
+  grid-template-rows: 0.8fr 0.2fr;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.8rem;
+  padding-bottom: 1.6rem;
+  gap: 1rem;
+}
+
+.pokedexCardTxt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.4rem 2rem;
+  gap: 0.4rem;
+}
+
+.pokedexCardType {
+  width: 100%;
+  display: flex;
+  gap: 1.4rem;
+}
+
+.pokedexCardType span {
+  width: 100%;
+  margin-top: 0.8rem;
+  color: white;
+  font-size: 1.4rem;
+  padding: 0.2rem 0;
+  border-radius: 0.4rem;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.171);
+}
+
+.pokedexCard p {
+  color: rgb(64, 64, 64);
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+
+.pokedexCard p:first-of-type {
+  color: rgb(110, 110, 110);
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.pokedexCard img {
+  object-fit: cover;
+  background-color: rgb(226, 226, 226);
+  border-radius: 0.8rem 0.8rem 0 0;
+  width: 100%;
+}
+
+.pokedex button {
+  width: 80%;
+  height: 4rem;
+  border-radius: 0.6rem;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 1.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: rgb(10, 159, 223);
+}
