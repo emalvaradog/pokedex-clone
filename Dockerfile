@@ -4,8 +4,12 @@ COPY ["package.json", "package-lock.json", "/src/app/"]
 
 WORKDIR "/src/app"
 
-RUN ["npm install"]
+RUN npm install
 
-COPY [".", "/src/app/"]
+COPY [".", "."]
 
-CMD ["npm", "run", "dev"]
+RUN npm run build
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
