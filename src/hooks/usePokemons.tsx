@@ -2,12 +2,10 @@ import { getPokemons } from "@/services/getPokemons";
 import { Pokemon } from "@/types/PokemonInterface";
 import { useEffect, useState } from "react";
 
-export function usePokemons(): [
-  (event: React.MouseEvent<HTMLButtonElement>) => void,
-  Pokemon[],
-  boolean
-] {
-  const [pokemons, setPokemons] = useState<any[]>([]);
+export function usePokemons(
+  data: []
+): [(event: React.MouseEvent<HTMLButtonElement>) => void, Pokemon[], boolean] {
+  const [pokemons, setPokemons] = useState<any[]>(data);
   const [offset, setOffset] = useState(12);
   const [isLoading, setIsLoading] = useState(false);
 

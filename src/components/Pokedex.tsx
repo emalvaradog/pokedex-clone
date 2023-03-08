@@ -3,9 +3,10 @@ import { usePokemons } from "@/hooks/usePokemons";
 import { Pokemon } from "@/types/PokemonInterface";
 import { Loading } from "./Loading";
 import s from "@/styles/Pokedex.module.css";
+import { getPokemons } from "@/services/getPokemons";
 
-export function Pokedex() {
-  const [nextPokemons, pokemons, isLoading] = usePokemons();
+export function Pokedex({ data }: { data: [] }) {
+  const [nextPokemons, pokemons, isLoading] = usePokemons(data);
 
   return (
     <div className={s.pokedex}>

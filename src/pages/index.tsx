@@ -1,8 +1,9 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { Pokedex } from "@/components";
+import { getPokemons } from "@/services/getPokemons";
 
-export default function Home() {
+export default function Home({ data }: { data: [] }) {
   return (
     <>
       <Head>
@@ -12,8 +13,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Pokedex />
+        <Pokedex data={data} />
       </main>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const data = await getPokemons(1, 12);
+
+  return {
+    props: { data },
+  };
 }
