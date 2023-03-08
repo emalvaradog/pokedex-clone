@@ -1,0 +1,42 @@
+.pokemonBarChar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pokemonBarChar ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  list-style-type: none;
+  gap: 0.4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.filledBars {
+  background-color: rgb(25, 202, 251);
+}
+
+.defaultBars {
+  background-color: white;
+}
+
+.pokemonBarChar li {
+  width: 100%;
+  height: 1.2rem;
+  border-radius: 0.15rem;
+}
+
+.pokemonBarChar p {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 425px) {
+  .pokemonBarChar p {
+    font-size: 1.2rem;
+  }
+}

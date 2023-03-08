@@ -1,0 +1,32 @@
+.pokemonStats {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  background-color: rgb(164, 164, 164);
+  padding: 1rem;
+  border-radius: 0.6rem;
+}
+
+.pokemonStats h1 {
+  font-size: 2rem;
+  align-self: flex-start;
+  color: rgb(58, 58, 58);
+  font-weight: 500;
+}
+
+.pokemonStatsContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(4rem, 1fr));
+  justify-content: center;
+  justify-items: center;
+  gap: 0.4rem;
+}
+
+@media screen and (min-width: 425px) {
+  .pokemonStats {
+    width: 45%;
+  }
+}
