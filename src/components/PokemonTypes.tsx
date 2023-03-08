@@ -11,7 +11,10 @@ export function PokemonTypes({
   return (
     <div className={s.pokemonPageTypes}>
       {!card && <p>Tipo</p>}
-      <div className={s.pokemonPageTypesContent}>
+      <div
+        className={s.pokemonPageTypesContent}
+        style={{ justifyContent: card ? "flex-start" : "center" }}
+      >
         {types.map((type) => (
           <span
             key={type.type.name}

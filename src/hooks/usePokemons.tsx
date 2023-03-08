@@ -3,9 +3,9 @@ import { Pokemon } from "@/types/PokemonInterface";
 import { useEffect, useState } from "react";
 
 export function usePokemons(
-  data: []
+  initialPokemons: []
 ): [(event: React.MouseEvent<HTMLButtonElement>) => void, Pokemon[], boolean] {
-  const [pokemons, setPokemons] = useState<any[]>(data);
+  const [pokemons, setPokemons] = useState<any[]>(initialPokemons);
   const [offset, setOffset] = useState(12);
   const [isLoading, setIsLoading] = useState(false);
 
